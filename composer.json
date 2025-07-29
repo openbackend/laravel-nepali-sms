@@ -1,0 +1,75 @@
+{
+    "name": "openbackend/nepali-sms",
+    "description": "A comprehensive Laravel package for integrating popular Nepali SMS gateways including Sparrow SMS, Sparrow A2P, Ebeema, EasySMS and more",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "sms",
+        "nepal",
+        "sparrow",
+        "ebeema",
+        "easysms",
+        "otp",
+        "bulk-sms",
+        "notification",
+        "gateway"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rudra Ramesh",
+            "email": "rudraramesh@example.com",
+            "homepage": "https://github.com/rudraramesh"
+        }
+    ],
+    "homepage": "https://github.com/openbackend/laravel-nepali-sms",
+    "support": {
+        "issues": "https://github.com/openbackend/laravel-nepali-sms/issues",
+        "source": "https://github.com/openbackend/laravel-nepali-sms"
+    },
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10.0|^11.0|^12.0",
+        "illuminate/http": "^10.0|^11.0|^12.0",
+        "illuminate/console": "^10.0|^11.0|^12.0",
+        "illuminate/database": "^10.0|^11.0|^12.0",
+        "illuminate/queue": "^10.0|^11.0|^12.0",
+        "illuminate/notifications": "^10.0|^11.0|^12.0",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0|^11.0",
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "mockery/mockery": "^1.5",
+        "phpstan/phpstan": "^1.0",
+        "laravel/pint": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "OpenBackend\\NepaliSms\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "OpenBackend\\NepaliSms\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "OpenBackend\\NepaliSms\\NepaliSmsServiceProvider"
+            ],
+            "aliases": {
+                "NepaliSms": "OpenBackend\\NepaliSms\\Facades\\NepaliSms"
+            }
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "analyse": "vendor/bin/phpstan analyse",
+        "format": "vendor/bin/pint"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
